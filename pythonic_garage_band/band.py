@@ -47,6 +47,9 @@ class Guitarist:
   def __repr__(self):
     return f"Guitarist instance. Name = {self.name}"
 
+  def get_instrument(self):
+    return self.instrument
+
 class Bassist:
   def __init__(self, name):
     self.instrument = "bass"
@@ -58,6 +61,9 @@ class Bassist:
   def __repr__(self):
     return f"Bassist instance. Name = {self.name}"
 
+  def get_instrument(self):
+    return self.instrument
+
 class Drummer:
   def __init__(self, name):
     self.instrument = "drums"
@@ -68,3 +74,6 @@ class Drummer:
 
   def __repr__(self):
     return f"Drummer instance. Name = {self.name}"
+
+  def get_instrument(self):
+    return self.instrument
