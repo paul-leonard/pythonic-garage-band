@@ -22,15 +22,28 @@ Each kind of Musician instance should have a play_solo method that returns strin
 
 
 class Band:
+    list = []
+    
     def __init__(self, name, members=None):
         self.name = name
         self.members = members
+        Band.list.append(self)
 
     def __str__(self):
         return f"The band {self.name}"
 
     def __repr__(self):
         return f"Band instance. name={self.name}, members={self.members}"
+
+    def play_solos(self):
+      solos = []
+      for member in self.members:
+        solos.append(member.play_solo())
+      return solos
+
+    @classmethod
+    def to_list(cls):
+      return cls.list
 
 
 class Musician:
