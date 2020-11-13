@@ -12,7 +12,7 @@ Want to be in a band!?! We are setting one up with this sweet Python OOP exercis
 This python script uses Object Oriented Programming methodoliges to structure a fictional band using classes and objects to layout the structure and composition of the band and their talents.
 
 ## Architecture
-TBD
+A base (or super) class of Musician is used to create classes of Guitarist, Drummer, and Bassist.  The created object instances can then be added to a band.  Bands are objects created by the class Band.  Various attributes and methods are available for each class including names, instruments, and a textual respresentation of their solos.
 
 ## Change Log
 **0.9.0** 11-12-2020 - Initial beta release
@@ -21,5 +21,5 @@ TBD
 ## Credits and Collaborations
 - Thanks to the SoloLearn Python Course for teaching me the basics to use in this app
 - Thanks to the team at Code Fellows Team!
-- Thanks to classmates I discussed and conferred with:  Yoni, Taylor, Lee
+- Thanks to classmates I discussed and conferred with:  Yoni, Taylor, Lee, Brendan
 - Additional thanks to Skyler for some pointers I heard them giving out.

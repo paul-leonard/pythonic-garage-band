@@ -61,41 +61,16 @@ class Musician:
   def play_solo(self):
     return self.solo
 
+
+
 class Guitarist(Musician):
   def __init__(self, name):
     super().__init__(name, "guitar", "Guitarist", "face melting guitar solo")
 
-
-class Bassist:
+class Bassist(Musician):
   def __init__(self, name):
-    self.instrument = "bass"
-    self.name = name
+    super().__init__(name, "bass", "Bassist", "bom bom buh bom")
 
-  def __str__(self):
-    return f"My name is {self.name} and I play {self.instrument}"
-
-  def __repr__(self):
-    return f"Bassist instance. Name = {self.name}"
-
-  def get_instrument(self):
-    return self.instrument
-
-  def play_solo(self):
-    return "bom bom buh bom"
-
-class Drummer:
+class Drummer(Musician):
   def __init__(self, name):
-    self.instrument = "drums"
-    self.name = name
-
-  def __str__(self):
-    return f"My name is {self.name} and I play {self.instrument}"
-
-  def __repr__(self):
-    return f"Drummer instance. Name = {self.name}"
-
-  def get_instrument(self):
-    return self.instrument
-
-  def play_solo(self):
-    return "rattle boom crash"
+    super().__init__(name, "drums", "Drummer", "rattle boom crash")

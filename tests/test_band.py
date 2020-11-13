@@ -102,7 +102,6 @@ def test_individual_solos(one_band):
 
 
 
-@pytest.mark.skip("pending")
 def test_band_members(one_band):
 
     assert len(one_band.members) == 3
