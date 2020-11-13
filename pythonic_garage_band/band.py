@@ -22,49 +22,49 @@ Each kind of Musician instance should have a play_solo method that returns strin
 
 
 class Band:
-    list = []
-    
-    def __init__(self, name, members=None):
-        self.name = name
-        self.members = members
-        Band.list.append(self)
-
-    def __str__(self):
-        return f"The band {self.name}"
-
-    def __repr__(self):
-        return f"Band instance. name={self.name}, members={self.members}"
-
-    def play_solos(self):
-      solos = []
-      for member in self.members:
-        solos.append(member.play_solo())
-      return solos
-
-    @classmethod
-    def to_list(cls):
-      return cls.list
+  list = []
+  
+  def __init__(self, name, members=None):
+      self.name = name
+      self.members = members
+      Band.list.append(self)
+  def __str__(self):
+      return f"The band {self.name}"
+  def __repr__(self):
+      return f"Band instance. name={self.name}, members={self.members}"
+  def play_solos(self):
+    solos = []
+    for member in self.members:
+      solos.append(member.play_solo())
+    return solos
+  @classmethod
+  def to_list(cls):
+    return cls.list
 
 
 class Musician:
-    pass
-
-class Guitarist:
-  def __init__(self, name):
-    self.instrument = "guitar"
+  def __init__(self, name, instrument, job, solo):
     self.name = name
+    self.instrument = instrument
+    self.job = job
+    self.solo = solo
 
   def __str__(self):
     return f"My name is {self.name} and I play {self.instrument}"
 
   def __repr__(self):
-    return f"Guitarist instance. Name = {self.name}"
+    return f"{self.job} instance. Name = {self.name}"
 
   def get_instrument(self):
     return self.instrument
 
   def play_solo(self):
-    return "face melting guitar solo"
+    return self.solo
+
+class Guitarist(Musician):
+  def __init__(self, name):
+    super().__init__(name, "guitar", "Guitarist", "face melting guitar solo")
+
 
 class Bassist:
   def __init__(self, name):
